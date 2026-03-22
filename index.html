@@ -1254,7 +1254,8 @@
             </div>
           </div>
           <div class="contact-form reveal">
-            <form id="portfolio-contact-form">
+            <form name="contact" method="POST" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact">
               <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -1410,7 +1411,6 @@
         const formStatus = document.getElementById('form-status');
 
         contactForm.addEventListener('submit', (e) => {
-          e.preventDefault();
           
           const nameInput = document.getElementById('name');
           const emailInput = document.getElementById('email');
